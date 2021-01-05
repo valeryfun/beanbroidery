@@ -29,9 +29,9 @@ export const productDetailsReducers = (
 	switch (action.type) {
 		case PRODUCT_DETAILS_REQUEST:
 			// true so the component knows its loading
-			return { loading: true, ...state }
+			return { ...state, loading: true }
 		case PRODUCT_DETAILS_SUCCESS:
-			// flase bcos finished loading
+			// false bcos finished loading
 			return { loading: false, product: action.payload }
 		case PRODUCT_DETAILS_FAILED:
 			return { loading: false, error: action.payload }

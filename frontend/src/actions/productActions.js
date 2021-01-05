@@ -36,7 +36,7 @@ export const listProductDetails = id => async dispatch => {
 	} catch (error) {
 		dispatch({
 			type: PRODUCT_DETAILS_FAILED,
-			oayload:
+			payload:
 				error.response && error.response.data.message
 					? error.response.data.message
 					: error.message
