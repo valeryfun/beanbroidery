@@ -11,7 +11,8 @@ import {
 	USER_DETAILS_FAIL,
 	USER_UPDATE_REQUEST,
 	USER_UPDATE_SUCCESS,
-	USER_UPDATE_FAIL
+	USER_UPDATE_FAIL,
+	USER_DETAILS_RESET
 } from '../constants/userConstants'
 
 export const userLoginReducers = (state = {}, action) => {
@@ -56,6 +57,10 @@ export const userDetailsReducers = (state = { user: {} }, action) => {
 			return { loading: false, user: action.payload }
 		case USER_DETAILS_FAIL:
 			return { loading: false, error: action.payload }
+		case USER_DETAILS_RESET:
+			return {
+				user:{}
+			}
 		default:
 			return state
 	}
