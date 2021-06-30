@@ -1,1 +1,3 @@
 # beanbroidery
+
+redesigning in progress. 
